@@ -1,0 +1,20 @@
+{
+  "USERS": [
+    {
+      "localDate": "2020/01/01",
+      "name1": "Ethan Hunt"
+    }, {
+      "localDate": "2020/01/02",
+      "name1": "david"
+    }, {
+      "localDate": "2020/01/03",
+      "name1": "abc"
+    }, {
+      "localDate": "2020/01/04",
+      "name1": "arthor"
+    }, {
+      "localDate": "2020/01/05",
+      "name1": "john doe"
+    }
+  ]
+}

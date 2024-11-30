@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Product 1",
+    "standort": "Wien",
+    "preis": 100.20
+  },
+  {
+    "name": "Product 2",
+    "standort": "Berlin",
+    "preis": 200.50
+  },
+  {
+    "name": "Product 3",
+    "standort": "München",
+    "preis": 300.80
+  },
+  {
+    "name": "Product 4",
+    "standort": "Hamburg",
+    "preis": 400.10
+  },
+  {
+    "name": "Product 5",
+    "standort": "Frankfurt",
+    "preis": 500.40
+  },
+  {
+    "name": "Product 6",
+    "standort": "Stuttgart",
+    "preis": 600.70
+  },
+  {
+    "name": "Product 7",
+    "standort": "Düsseldorf",
+    "preis": 700.90
+  },
+  {
+    "name": "Product 8",
+    "standort": "Dresden",
+    "preis": 800.30
+  },
+  {
+    "name": "Product 9",
+    "standort": "Leipzig",
+    "preis": 900.60
+  },
+  {
+    "name": "Product 10",
+    "standort": "Hannover",
+    "preis": 1000.90
+  }
+
+]
