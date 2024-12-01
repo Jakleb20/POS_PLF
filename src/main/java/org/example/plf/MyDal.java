@@ -72,4 +72,14 @@ public class MyDal implements IDal{
     public Product getProductById(String id) {
         return productRepository.getProductById(Integer.parseInt(id));
     }
+
+    @Override
+    public void saveAllLocations(List<Location> locations) {
+        locationRepository.saveAll(locations);
+    }
+
+    @Override
+    public void saveAllProducts(List<Product> products) {
+        productRepository.saveAll(products);
+    }
 }

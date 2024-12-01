@@ -32,10 +32,6 @@ public class ShoppingChartApplication implements ApplicationRunner {
     private IDal dal;
     
     private ObjectMapper om;
-    @Autowired
-    private LocationRepository locationRepository;
-    @Autowired
-    private ProductRepository productRepository;
 
     public ShoppingChartApplication(ObjectMapper om, IDal dal){
         this.dal = dal;
@@ -88,7 +84,7 @@ public class ShoppingChartApplication implements ApplicationRunner {
             products.add(new Product(dto.getName(), dto.getPreis(), location));
         }
         
-        locationRepository.saveAll(locations);
-        productRepository.saveAll(products);
+        dal.saveAllLocations(locations);
+        dal.saveAllProducts(products);
     }
 }

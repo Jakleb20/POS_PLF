@@ -8,14 +8,15 @@ import org.example.plf.models.UserList;
 import java.util.List;
 
 public interface IDal {
-    public void saveUserList(UserList userList);
-    public void saveLocation(Location location);
-    public Location findLocationByName(String name);
-    public void deleteAllUsers();
-    public void deleteAllProducts();
-    public void deleteAllLocations();
-    public int countProductByLocation(Location location);
+    void saveUserList(UserList userList);
+    void saveLocation(Location location);
+    Location findLocationByName(String name);
+    void deleteAllUsers();
+    void deleteAllProducts();
+     void deleteAllLocations();
+     int countProductByLocation(Location location);
     User getUserById(String id);
-
     Product getProductById(String s);
+    void saveAllLocations(List<Location> locations);
+    void saveAllProducts(List<Product> products);
 }

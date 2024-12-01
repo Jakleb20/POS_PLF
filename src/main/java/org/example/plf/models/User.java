@@ -22,12 +22,4 @@ public class User {
     
     @JsonFormat(pattern = "yyyy/MM/dd")
     private LocalDate localDate;
-    
-    @JsonIgnore
-    @ManyToOne
-    @org.springframework.data.annotation.Transient
-    private UserList userList;
-    
-    
-    
 }
