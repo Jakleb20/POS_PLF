@@ -49,12 +49,13 @@ public class ShoppingChartApplication implements ApplicationRunner {
         dal.deleteAllProducts();
 
         UserList userList = om.readValue(resource1.getFile(), new TypeReference<UserList>() {});
-        
         dal.saveUserList(userList);
 
         List<ProductDTO> productDTO = om.readValue(resource2.getFile(), new TypeReference<List<ProductDTO>>() {});
-        
         List<Location> locations = new ArrayList<>();
+        List<Product> products = new ArrayList<>();
+
+        
         
         productDTO.forEach(p -> {
             boolean isEnthalten = false;
@@ -65,26 +66,23 @@ public class ShoppingChartApplication implements ApplicationRunner {
                     break;
                 }
             }
-            
             if (!isEnthalten){
                 locations.add(new Location(p.getStandort()));
             }
-            
         });
-        
-        List<Product> products = new ArrayList<>();
 
         for (ProductDTO dto : productDTO) {
-            Location location = new Location();
             for (Location location1 : locations) {
                 if (location1.getName().equals(dto.getStandort())) {
-                    location = location1;
+                    // Product zur Location hinzufügen
+                    // Durch das cascade = CascadeType.PERSIST in Location wird das Product auch in
+                    // der Tabelle product gespeichert
+                    location1.getProducts().add(new Product(dto.getName(), dto.getPreis(), location1));
+                    break;
                 }
             }
-            products.add(new Product(dto.getName(), dto.getPreis(), location));
-        }
+        }        
         
         dal.saveAllLocations(locations);
-        dal.saveAllProducts(products);
     }
 }
